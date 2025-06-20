@@ -1,0 +1,32 @@
+<div class="logoheader"><div class="hdtitle">Student List </div></div>
+<br/>
+<div class="styled-box">
+    <div style=" text-align:right ">
+    <button (click)="createStudent()" class = "btn btn-info" >Add Student</button>
+    <br/><br/>
+    </div>
+    
+    <table *ngIf="students.length > 0" class="table table-striped table-bordered table-hover" >
+        <thead>
+            <tr>
+                <th>Student Name </th>
+                <th>Age</th>
+                <th>Class </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td>{{student.studentName}}</td>
+                <td>{{student.studentAge}}</td>
+                <td>{{student.studentClass}}</td>
+                <td>
+                    <button (click) = "updateStudent(student.studentId)" class = "btn btn-primary"> Update</button>
+                    <button (click) = "deleteStudent(student.studentId)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                    <button (click) = "studentDetails(student.studentId)" class = "btn btn-success" style="margin-left: 10px"> View</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+  
+</div>
+    <router-outlet></router-outlet>

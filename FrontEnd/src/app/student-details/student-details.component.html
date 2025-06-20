@@ -1,0 +1,27 @@
+<div class="logoheader"><div class="hdtitle">Student List </div></div>
+<br/>
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center" style="background-color:#3f51b5 !important"> Details</h3>
+            <hr />
+            <div class="card-body">
+                <form>
+                <div class="form-group">
+                     <label id="studentname" name="studentname"><b>Student Name : </b>{{students.studentName}}</label>
+                </div>
+                <div class="form-group">
+                     <label id="studentage" name="studentage"> <b>Age : </b>{{students.studentAge}}</label> 
+                </div>
+                <div class="form-group">
+                      <label  id="studentclass" name="studentclass"><b>Class : </b>{{students.studentClass}}</label>
+                </div>
+                
+                <br/>
+                     <button class="btn btn-warning" type="button" style="margin-left: 10px" (click)="goToStudentList()">OK</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
